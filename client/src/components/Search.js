@@ -49,7 +49,7 @@ export default function Search() {
                 <input type='text' name='search' defaultValue={searchTerm} placeholder='Search (Mission, Rocket, or Year)' onChange={e => setSearchTerm(e.target.value)} />
                 <button type='submit'>Filter!</button>
             </form>
-            <h1>RESULTS</h1>
+            <h1>Launch Results</h1>
             {launches.length !== 0 ? launches.map(launch => (
                 <ResultCard 
                     // added name to key to resolve console warnings of two keys being the same 
