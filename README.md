@@ -3,7 +3,7 @@
 ## Development
 Clone the repo and follow the instructions below to begin Local Development
 
-### Back End (Server)
+### Backend (Server)
 From the root directory of the app
 ```bash
 cd server
@@ -12,7 +12,7 @@ npm install
 npm run server
 ```
 
-### Front End (Client)
+### Frontend (Client)
 From the root directory of the app
 
 ```bash
