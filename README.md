@@ -1,9 +1,9 @@
 # A SpaceX API Search using GraphQL, Apollo, and React
 
 ## Development
-Clone the repo and follow the instructions below to begin Local Development
+Clone the repo and follow the instructions below to begin local development
 
-### Back End (Server)
+### Backend (Server)
 From the root directory of the app
 ```bash
 cd server
@@ -12,7 +12,7 @@ npm install
 npm run server
 ```
 
-### Front End (Client)
+### Frontend (Client)
 From the root directory of the app
 
 ```bash
@@ -22,5 +22,5 @@ npm install
 npm run start
 ```
 
-####
+#### 
 Feel free to clone this app for your own project, log any issues (or fix them yourself and submit a PR) :) 
