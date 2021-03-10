@@ -24,6 +24,6 @@ npm run start
 ```
 
 #### Other Notes
-- This app currently has a separate backend and frontend, so you will need at least 2 terminal tabs open for now (alternatively, you can use run-p or concurrently to run them at the same time)
+- This app currently has separate commands to run the backend and frontend, so you will need at least 2 terminal tabs open (alternatively, you can use run-p or concurrently to run them at the same time)
 - I am not ~~a cat~~ a graphql wizard, and this app is my first crack at it
 - Feel free to clone this app for your own project, log any issues (or fix them yourself and submit a PR) :) 
