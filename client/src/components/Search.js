@@ -5,8 +5,10 @@ import ResultCard from './ResultCard';
 
 
 export default function Search() {
+
     const [searchTerm, setSearchTerm] = useState('');
     const [launches, setLaunches] = useState([]);
+    const [noDataNote, setNoDataNote] = useState('Loading...');
 
     const {data} = useQuery(FETCH_LAUNCHES);
 
@@ -32,6 +34,11 @@ export default function Search() {
             launch.launch_date_local.slice(0,4).includes(searchTerm)
         ));
 
+        // return unique message if no results returned
+        if(filteredList.length === 0 ){
+            setNoDataNote('Your Search Results Returned 0 Matches! Please try again...');
+        }
+        
         // set filtered list to be displayed list
         setLaunches(filteredList);
     }
@@ -52,7 +59,7 @@ export default function Search() {
                     rocket_name={launch.rocket.rocket_name} 
                     video={launch.links.video_link}
                 /> 
-            )) : 'Loading...'
+            )) : noDataNote
             }
 
         </div>
