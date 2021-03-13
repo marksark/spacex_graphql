@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import React, {useEffect, useState} from 'react';
-import {FETCH_LAUNCHES} from '../graphql/Queries';
+// import {FETCH_LAUNCHES, FETCH_LAUNCHES_FILTERED} from '../graphql/Queries';
+import {FETCH_LAUNCHES_FILTERED} from '../graphql/Queries';
 import ResultCard from './ResultCard';
 
 
@@ -10,9 +11,7 @@ export default function Search() {
     const [launches, setLaunches] = useState([]);
     const [noDataNote, setNoDataNote] = useState('Loading...');
 
-    const {data} = useQuery(FETCH_LAUNCHES);
-
-    // TODO: Learn how to search with filter implemented in GraphQL
+    const {data} = useQuery(FETCH_LAUNCHES_FILTERED);
     
     // initialize the data with all launches
     useEffect(()=>{
