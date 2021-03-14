@@ -17,22 +17,14 @@ export const FETCH_LAUNCHES = gql`
     }
 `;
 
+
 // first attempt at filtered query
-export const FETCH_LAUNCHES_FILTERED = (txt = '') => (gql`
-    query(filter: OR[{
-    launches: {
-      mission_name: ${txt}
-    },
-    launches: {
-      rocket: {
-        rocket_name: ${txt}
-      }
-    },
-    launches: {
-        launch_date_local: ${txt}
-    }
-  }]) {
-        launches {
+export const FETCH_LAUNCHES_FILTERED = gql`
+    query {
+        launches(
+            filter: {
+                OR: [ {mission_name: "Rocket"}] 
+        }) {
             flight_number
             launch_date_local
             mission_name
@@ -44,4 +36,4 @@ export const FETCH_LAUNCHES_FILTERED = (txt = '') => (gql`
             }
         }
     }
-`);
+`;
